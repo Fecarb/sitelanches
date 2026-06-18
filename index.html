@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerdeMar Lanches - Sanduíches Naturais e Bebidas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="verdemar.png" alt="VerdeMar Lanches Logo" class="logo-topo">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <main class="cardapio">
+            <h2>Nosso Cardápio</h2>
+            
+            <div class="produtos-grid">
+                <div class="produto-card" data-id="1" data-nome="Sanduíche Frango com Maionese" data-preco="15.00">
+                    <img src="frangoEmaionese.png" alt="Sanduíche de Frango com Maionese" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Frango com Maionese</h3>
+                        <p class="preco">R$ 15,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-id="2" data-nome="Sanduíche Frango com Catupiry" data-preco="15.00">
+                    <img src="frangoEcatupiry.png" alt="Sanduíche de Frango com Catupiry" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Frango com Catupiry</h3>
+                        <p class="preco">R$ 15,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-id="3" data-nome="Sanduíche Frango e Cheddar" data-preco="15.00">
+                    <img src="frangoEcheddar.png" alt="Sanduíche de Frango e Cheddar" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Frango e Cheddar</h3>
+                        <p class="preco">R$ 15,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-id="4" data-nome="Mate Leão" data-preco="10.00">
+                    <img src="mateleao.png" alt="Copo de Mate Gelado" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Mate Leão</h3>
+                        <p class="preco">R$ 10,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-id="5" data-nome="Água Sem Gás" data-preco="5.00">
+                    <img src="aguaSemgas.png" alt="Garrafa de Água Mineral" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Água Sem Gás</h3>
+                        <p class="preco">R$ 5,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+
+                <div class="produto-card" data-id="6" data-nome="Água Com Gás" data-preco="5.00">
+                    <img src="aguaComgas.png" alt="Garrafa de Água com Gás" class="produto-img">
+                    <div class="produto-info">
+                        <h3>Água Com Gás</h3>
+                        <p class="preco">R$ 5,00</p>
+                        <button class="btn-adicionar">Adicionar à Cesta</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="cesta-container">
+            <div class="cesta-header">
+                <h2>Sua Cesta 🛒</h2>
+            </div>
+            
+            <div class="cesta-itens" id="cesta-itens">
+                <p class="cesta-vazia">Sua cesta está vazia.</p>
+            </div>
+
+            <div class="cesta-total">
+                <div class="total-linha">
+                    <span>Total:</span>
+                    <span id="valor-total">R$ 0,00</span>
+                </div>
+                <button class="btn-finalizar" id="btn-finalizar" disabled>Finalizar Pedido</button>
+            </div>
+        </aside>
+
+    </div> <footer>
+        <p>&copy; 2026 VerdeMar Lanches - Sabor Natural e Refrescante.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

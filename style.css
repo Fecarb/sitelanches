@@ -1,0 +1,244 @@
+/* ==========================================================================
+   APARÊNCIA DO HTML: VERDEMAR LANCHES
+   Estilização baseada nas cores verde-mar, laranja-sol e bege da marca.
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fcfbf7; /* Tom off-white/bege claro praiano */
+    color: #2b4c43; /* Verde escuro para leitura */
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 15px 0;
+    text-align: center;
+}
+
+.logo-topo {
+    max-width: 280px;
+    height: auto;
+}
+
+.container {
+    max-width: 100%; /* Mudado aqui para dar mais espaço nas laterais */
+    margin: 30px auto;
+    padding: 0 40px; /* Aumentamos um pouco o respiro das bordas */
+    display: grid;
+    grid-template-columns: 2.5fr 1fr; /* Dá mais espaço para o cardápio e mantém a cesta firme */
+    gap: 30px;
+}
+
+h2 {
+    color: #1b6d58; /* Verde característico da marca */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #f6a122; /* Linha de destaque laranja */
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+/* Grid de Exibição dos Produtos */
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.produto-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border: 1px solid #eef3f1;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(27, 109, 88, 0.1);
+}
+
+.produto-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.produto-info {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.produto-info h3 {
+    font-size: 17px;
+    color: #2b4c43;
+    margin-bottom: 10px;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #f6a122; /* Destaque no valor em Laranja */
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    background-color: #1b6d58;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-adicionar:hover {
+    background-color: #145343;
+}
+
+/* Design da Cesta Lateral */
+.cesta-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.cesta-header {
+    border-bottom: 2px solid #eef3f1;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.cesta-vazia {
+    color: #8fa09b;
+    text-align: center;
+    padding: 30px 0;
+    font-style: italic;
+}
+
+/* Itens Internos da Cesta */
+.cesta-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f7faf9;
+}
+
+.item-detalhes h4 {
+    font-size: 14px;
+    color: #2b4c43;
+}
+
+.item-detalhes span {
+    font-size: 13px;
+    color: #f6a122;
+    font-weight: bold;
+}
+
+/* Controles de +1, -1 e Remover */
+.item-controles {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-qtd {
+    background-color: #eef3f1;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #1b6d58;
+    cursor: pointer;
+}
+
+.btn-qtd:hover {
+    background-color: #dbe6e2;
+}
+
+.qtd-num {
+    font-weight: bold;
+    font-size: 14px;
+    min-width: 15px;
+    text-align: center;
+}
+
+/* Totalizador */
+.cesta-total {
+    margin-top: 20px;
+    border-top: 2px solid #eef3f1;
+    padding-top: 15px;
+}
+
+.total-linha {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2b4c43;
+    margin-bottom: 15px;
+}
+
+#valor-total {
+    color: #1b6d58;
+    font-size: 22px;
+}
+
+.btn-finalizar {
+    width: 100%;
+    background-color: #f6a122;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-finalizar:hover:not(:disabled) {
+    background-color: #e08f19;
+}
+
+.btn-finalizar:disabled {
+    background-color: #cbd5e0;
+    cursor: not-allowed;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #8fa09b;
+    font-size: 14px;
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 850px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .cesta-container {
+        position: static;
+    }
+}
